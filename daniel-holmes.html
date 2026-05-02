@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Holmes – VP of Product Planning & Strategy</title>
+<meta name="description" content="Daniel Holmes – VP of Product Planning & Strategy at Feedzai. Fraud prevention leader working at the intersection of strategy, product marketing, and financial crime technology.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #0f0f0f;
+    --paper: #f7f5f0;
+    --accent: #c8432a;
+    --muted: #6b6660;
+    --rule: #d8d4cd;
+    --card: #ffffff;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: var(--paper);
+    border-bottom: 1px solid var(--rule);
+    padding: 0 48px;
+    height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--ink); }
+
+  .hero {
+    padding-top: 56px;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+  }
+  .hero-left {
+    padding: 80px 48px 80px 64px;
+    display: flex; flex-direction: column; justify-content: center;
+    animation: fadeUp 0.8s ease both;
+  }
+  .hero-right {
+    background: var(--ink);
+    position: relative;
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .hero-right::before {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #c8432a22 0%, transparent 70%);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .hero-grid-pattern {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .hero-monogram {
+    position: relative; z-index: 1;
+    font-family: 'Playfair Display', serif;
+    font-size: 140px; font-weight: 700;
+    color: rgba(255,255,255,0.07);
+    letter-spacing: -8px; user-select: none;
+    animation: fadeIn 1.2s ease both 0.3s;
+  }
+  .hero-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+  .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(42px, 5vw, 62px); font-weight: 700; line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 20px; }
+  .hero-title { font-size: 17px; font-weight: 300; color: var(--muted); margin-bottom: 12px; }
+  .hero-company { font-size: 17px; font-weight: 500; }
+  .hero-divider { width: 48px; height: 2px; background: var(--accent); margin: 32px 0; }
+  .hero-bio { font-size: 16px; font-weight: 300; color: #3a3735; max-width: 460px; line-height: 1.75; margin-bottom: 40px; }
+  .hero-cta { display: inline-flex; align-items: center; gap: 10px; background: var(--ink); color: #fff; text-decoration: none; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 28px; transition: background 0.2s, transform 0.2s; }
+  .hero-cta:hover { background: var(--accent); transform: translateX(3px); }
+
+  section { padding: 96px 64px; }
+  section:nth-child(even) { background: var(--card); }
+
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 600; letter-spacing: -0.8px; margin-bottom: 48px; max-width: 560px; }
+
+  .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); }
+  .expertise-card { background: var(--paper); padding: 36px 32px; transition: background 0.2s; }
+  section:nth-child(even) .expertise-card { background: var(--card); }
+  .expertise-card:hover { background: var(--ink); color: #fff; }
+  .expertise-card:hover .expertise-icon { color: var(--accent); }
+  .expertise-card:hover .expertise-desc { color: rgba(255,255,255,0.6); }
+  .expertise-icon { font-size: 22px; margin-bottom: 16px; }
+  .expertise-title { font-weight: 600; font-size: 15px; margin-bottom: 8px; }
+  .expertise-desc { font-size: 13px; color: var(--muted); line-height: 1.6; transition: color 0.2s; }
+
+  .experience-list { display: flex; flex-direction: column; }
+  .exp-item { display: grid; grid-template-columns: 200px 1fr; gap: 32px; padding: 36px 0; border-bottom: 1px solid var(--rule); }
+  .exp-item:first-child { border-top: 1px solid var(--rule); }
+  .exp-left { padding-top: 4px; }
+  .exp-company { font-weight: 600; font-size: 14px; margin-bottom: 4px; }
+  .exp-period { font-size: 12px; color: var(--muted); letter-spacing: 0.03em; }
+  .exp-tenure { display: inline-block; margin-top: 8px; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+  .exp-roles { display: flex; flex-direction: column; gap: 16px; }
+  .exp-role-title { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 600; margin-bottom: 4px; letter-spacing: -0.3px; }
+  .exp-role-period { font-size: 12px; color: var(--muted); }
+  .exp-role-separator { width: 24px; height: 1px; background: var(--rule); margin: 4px 0; }
+
+  .featured-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .featured-card { border: 1px solid var(--rule); padding: 32px; position: relative; overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+  .featured-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--accent); transition: height 0.3s ease; }
+  .featured-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+  .featured-card:hover::before { height: 100%; }
+  .featured-card-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .featured-card-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; line-height: 1.3; margin-bottom: 10px; }
+  .featured-card-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+  .press-grid { display: flex; flex-direction: column; }
+  .press-item { display: grid; grid-template-columns: 160px 1fr auto; gap: 32px; align-items: start; padding: 28px 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; transition: background 0.15s; }
+  .press-item:first-child { border-top: 1px solid var(--rule); }
+  .press-item:hover { background: rgba(200,67,42,0.03); }
+  .press-item:hover .press-arrow { opacity: 1; transform: translateX(0); color: var(--accent); }
+  .press-outlet { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+  .press-outlet-name { color: var(--ink); display: block; margin-bottom: 4px; }
+  .press-date { font-size: 11px; color: var(--muted); }
+  .press-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; line-height: 1.35; margin-bottom: 8px; letter-spacing: -0.2px; }
+  .press-summary { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .press-arrow { font-size: 18px; color: var(--muted); opacity: 0; transform: translateX(-6px); transition: opacity 0.2s, transform 0.2s, color 0.2s; padding-top: 2px; flex-shrink: 0; }
+  .press-type-badge { display: inline-block; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--rule); color: var(--muted); margin-bottom: 10px; }
+
+  .contact-section { background: var(--ink); color: #fff; padding: 96px 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .contact-section .section-label { color: var(--accent); }
+  .contact-links { display: flex; flex-direction: column; gap: 0; }
+  .contact-link { display: flex; align-items: center; gap: 16px; text-decoration: none; color: rgba(255,255,255,0.6); font-size: 14px; transition: color 0.2s; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .contact-link:hover { color: #fff; }
+  .contact-link-icon { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; transition: border-color 0.2s, background 0.2s; }
+  .contact-link:hover .contact-link-icon { border-color: var(--accent); background: var(--accent); color: #fff; }
+  .contact-statement { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.5vw, 32px); font-weight: 400; line-height: 1.5; color: rgba(255,255,255,0.85); }
+  .contact-statement em { color: var(--accent); font-style: normal; }
+
+  footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.08); padding: 24px 64px; display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.3); font-size: 12px; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .nav-links { gap: 20px; }
+    .hero { grid-template-columns: 1fr; min-height: auto; }
+    .hero-left { padding: 80px 24px 60px; }
+    .hero-right { display: none; }
+    section { padding: 64px 24px; }
+    .expertise-grid { grid-template-columns: 1fr 1fr; }
+    .exp-item { grid-template-columns: 1fr; gap: 8px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .press-item { grid-template-columns: 1fr; gap: 8px; }
+    .press-outlet { padding-top: 0; }
+    .press-arrow { display: none; }
+    .contact-section { grid-template-columns: 1fr; padding: 64px 24px; }
+    footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">DH</div>
+  <div class="nav-links">
+    <a href="#expertise">Expertise</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#press">Press</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">VP · Product Marketing &amp; Strategy</div>
+    <h1 class="hero-name">Daniel<br>Holmes</h1>
+    <div class="hero-title">VP of Product Planning &amp; Strategy at</div>
+    <div class="hero-company">Feedzai</div>
+    <div class="hero-divider"></div>
+    <p class="hero-bio">Fraud prevention leader working at the intersection of strategy, product marketing, and financial crime technology. Helping banks understand, measure, and reduce fraud at scale.</p>
+    <a href="#contact" class="hero-cta">Get in touch <span>→</span></a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-grid-pattern"></div>
+    <div class="hero-monogram">DH</div>
+  </div>
+</div>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="section-label">What I do</div>
+  <div class="section-title">Sitting at the intersection of product, strategy, and market.</div>
+  <div class="expertise-grid">
+    <div class="expertise-card reveal"><div class="expertise-icon">◈</div><div class="expertise-title">Product Marketing</div><div class="expertise-desc">GTM strategy, messaging, positioning, and launch execution for fraud and financial crime technology.</div></div>
+    <div class="expertise-card reveal"><div class="expertise-icon">◉</div><div class="expertise-title">Fraud &amp; Identity Strategy</div><div class="expertise-desc">Deep domain expertise across fraud prevention, behavioural biometrics, identity, and AML from both bank and vendor sides.</div></div>
+    <div class="expertise-card reveal"><div class="expertise-icon">◫</div><div class="expertise-title">Competitive Intelligence</div><div class="expertise-desc">Vendor landscape analysis, market positioning, and differentiated narrative development for complex B2B markets.</div></div>
+    <div class="expertise-card reveal"><div class="expertise-icon">◬</div><div class="expertise-title">Go-to-Market Leadership</div><div class="expertise-desc">Cross-functional GTM planning, PM/PMM alignment, and structured release processes that scale with product velocity.</div></div>
+    <div class="expertise-card reveal"><div class="expertise-icon">◭</div><div class="expertise-title">Executive Communications</div><div class="expertise-desc">Stakeholder messaging, thought leadership, analyst and partner engagement at C-suite and board level.</div></div>
+    <div class="expertise-card reveal"><div class="expertise-icon">◮</div><div class="expertise-title">Market &amp; Product Insight</div><div class="expertise-desc">Translating market signals, buyer behaviour, and competitive dynamics into actionable product and commercial direction.</div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Career</div>
+  <div class="section-title">15+ years in fraud prevention, across bank and vendor.</div>
+  <div class="experience-list">
+    <div class="exp-item reveal">
+      <div class="exp-left"><div class="exp-company">Feedzai</div><div class="exp-period">Jan 2022 – Present</div><div class="exp-tenure">4 yrs 5 mos</div></div>
+      <div class="exp-roles">
+        <div><div class="exp-role-title">VP of Product Planning &amp; Strategy</div><div class="exp-role-period">Oct 2025 – Present</div></div>
+        <div class="exp-role-separator"></div>
+        <div><div class="exp-role-title">Director of Banking Fraud, Identity &amp; Market Strategy</div><div class="exp-role-period">Jul 2024 – Oct 2025</div></div>
+        <div class="exp-role-separator"></div>
+        <div><div class="exp-role-title">Fraud Prevention SME</div><div class="exp-role-period">Jan 2022 – Jul 2024</div></div>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-left"><div class="exp-company">LexisNexis Risk Solutions</div><div class="exp-period">Jan 2019 – Jan 2022</div><div class="exp-tenure">3 yrs 1 mo</div></div>
+      <div class="exp-roles">
+        <div><div class="exp-role-title">Solutions Director, EMEA</div><div class="exp-role-period">Sep 2020 – Jan 2022</div></div>
+        <div class="exp-role-separator"></div>
+        <div><div class="exp-role-title">Principal Banking Solutions Consultant – Fraud &amp; Identity</div><div class="exp-role-period">Jan 2019 – Sep 2020</div></div>
+      </div>
+    </div>
+    <div class="exp-item reveal">
+      <div class="exp-left"><div class="exp-company">Lloyds Banking Group</div><div class="exp-period">Jan 2012 – Jan 2019</div><div class="exp-tenure">7 yrs 1 mo</div></div>
+      <div class="exp-roles">
+        <div><div class="exp-role-title">Digital Fraud Analytics Lead – Fraud Transformation</div><div class="exp-role-period">Sep 2016 – Jan 2019</div></div>
+        <div class="exp-role-separator"></div>
+        <div><div class="exp-role-title">Digital Fraud Manager</div><div class="exp-role-period">May 2015 – Sep 2016</div></div>
+        <div class="exp-role-separator"></div>
+        <div><div class="exp-role-title">Fraud Data Analyst</div><div class="exp-role-period">Jan 2012 – May 2015</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section id="work">
+  <div class="section-label">Selected work</div>
+  <div class="section-title">Recent initiatives and thought leadership.</div>
+  <div class="featured-grid">
+    <div class="featured-card reveal"><div class="featured-card-tag">Report · 2025</div><div class="featured-card-title">State of Fraud Performance – Industry Benchmarking Report</div><div class="featured-card-desc">The first industry benchmarking tool enabling financial institutions to compare fraud management performance against global peers, using Value Detection Rate and False Positive Rate as primary metrics.</div></div>
+    <div class="featured-card reveal"><div class="featured-card-tag">Event · June 2026</div><div class="featured-card-title">Feedzai Fusion North America, New York</div><div class="featured-card-desc">Inaugural North American flagship event bringing together leaders from banking, payments, and technology to address the convergence of fraud, identity, and security.</div></div>
+    <div class="featured-card reveal"><div class="featured-card-tag">Whitepaper · 2026</div><div class="featured-card-title">RiskFM: Foundation Models in Fraud Prevention</div><div class="featured-card-desc">How foundation models supersede traditional ML in fraud detection - delivering better pattern recognition from day one, without dependency on labelled data or feature engineering cycles.</div></div>
+    <div class="featured-card reveal"><div class="featured-card-tag">Partnership · 2025</div><div class="featured-card-title">Mastercard × Feedzai: A World of Safer Money</div><div class="featured-card-desc">Strategic partnership spanning scam prevention, real-time payments, and collaborative defence - addressing the increasing sophistication of fraud across the digital payments ecosystem.</div></div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section id="press">
+  <div class="section-label">In the press</div>
+  <div class="section-title">Media coverage and cited commentary.</div>
+  <div class="press-grid">
+    <a href="https://thefintechtimes.com/from-virtual-love-to-real-losses-the-rising-threat-of-ai-fueled-romance-scams/" target="_blank" rel="noopener" class="press-item reveal">
+      <div class="press-outlet"><span class="press-outlet-name">The Fintech Times</span><span class="press-date">Feb 2025</span></div>
+      <div class="press-content"><div class="press-type-badge">Media Citation</div><div class="press-title">From Virtual Love to Real Losses: The Rising Threat of AI-Fuelled Romance Scams</div><div class="press-summary">Cited as senior fraud and identity expert ahead of Valentine's Day, warning that AI-enhanced romance scams are becoming simultaneously more common and more convincing.</div></div>
+      <div class="press-arrow">→</div>
+    </a>
+    <a href="https://financialit.net/news/fraud-detection/feedzai-launches-new-benchmarking-report" target="_blank" rel="noopener" class="press-item reveal">
+      <div class="press-outlet"><span class="press-outlet-name">Financial IT</span><span class="press-date">2025</span></div>
+      <div class="press-content"><div class="press-type-badge">Quoted</div><div class="press-title">Feedzai Launches Industry's First Benchmarking Report for Fraud Management Performance</div><div class="press-summary">Quoted on the industry's need for objective peer comparison in fraud management, and Feedzai's approach to providing strategic insight alongside performance data.</div></div>
+      <div class="press-arrow">→</div>
+    </a>
+    <a href="https://paymentexpert.com/2023/09/14/feedzai-how-ai-safeguarded-consumers-during-scam-summer/" target="_blank" rel="noopener" class="press-item reveal">
+      <div class="press-outlet"><span class="press-outlet-name">Payment Expert</span><span class="press-date">Sep 2023</span></div>
+      <div class="press-content"><div class="press-type-badge">Authored</div><div class="press-title">How AI Safeguarded Consumers During 'Scam Summer'</div><div class="press-summary">Authored piece on AI's role in combating fraud during a period of heightened threat - examining how financial pressures create conditions for consumer scams.</div></div>
+      <div class="press-arrow">→</div>
+    </a>
+    <a href="https://ffnews.com/newsarticle/over-1-2-billion-stolen-through-fraud-in-2022-with-nearly-80-per-cent-of-app-fraud-cases-starting-online/" target="_blank" rel="noopener" class="press-item reveal">
+      <div class="press-outlet"><span class="press-outlet-name">FF News</span><span class="press-date">May 2023</span></div>
+      <div class="press-content"><div class="press-type-badge">Quoted</div><div class="press-title">UK Finance Annual Fraud Report 2023 – Over £1.2bn Stolen Through Fraud</div><div class="press-summary">Quoted as Feedzai's lead contributor on the UK Finance Annual Fraud Report, commenting on the critical inflection point created by rapidly evolving fraud tactics and technology.</div></div>
+      <div class="press-arrow">→</div>
+    </a>
+    <a href="https://ffnews.com/newsarticle/feedzai-joins-gasa-the-global-anti-scam-alliance/" target="_blank" rel="noopener" class="press-item reveal">
+      <div class="press-outlet"><span class="press-outlet-name">FF News</span><span class="press-date">Mar 2023</span></div>
+      <div class="press-content"><div class="press-type-badge">Quoted</div><div class="press-title">Feedzai Joins the Global Anti-Scam Alliance (GASA)</div><div class="press-summary">Provided official comment on Feedzai's GASA membership, outlining commitments to global knowledge sharing and working group contributions on scam prevention.</div></div>
+      <div class="press-arrow">→</div>
+    </a>
+    <a href="https://ffnews.com/fintech-tv/webinars/feedzai-webinar-how-complex-fraud-scams-are-executed-and-how-to-detect-and-stop-them/" target="_blank" rel="noopener" class="press-item reveal">
+      <div class="press-outlet"><span class="press-outlet-name">FF News / Feedzai</span><span class="press-date">2022</span></div>
+      <div class="press-content"><div class="press-type-badge">Speaker</div><div class="press-title">How Complex Fraud Scams Are Executed – and How to Detect and Stop Them</div><div class="press-summary">Featured alongside Cecilie Fjellhøy (Netflix's Tinder Swindler) to explain how behavioural detection technology identifies scam-driven banking patterns before funds leave the account.</div></div>
+      <div class="press-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div>
+    <div class="section-label">Contact</div>
+    <div class="section-title" style="color:#fff; margin-bottom: 16px;">Let's connect.</div>
+    <p style="color:rgba(255,255,255,0.5); font-size:14px; margin-bottom: 40px;">Open to speaking engagements, advisory conversations, and industry collaboration.</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/daniel-holmes-65911483/" target="_blank" rel="noopener" class="contact-link">
+        <div class="contact-link-icon">in</div>LinkedIn Profile
+      </a>
+      <a href="mailto:daniel.holmes@feedzai.com" class="contact-link">
+        <div class="contact-link-icon">@</div>daniel.holmes@feedzai.com
+      </a>
+      <a href="#" class="contact-link">
+        <div class="contact-link-icon">📍</div>United Kingdom
+      </a>
+    </div>
+  </div>
+  <div>
+    <p class="contact-statement">"Banks want to understand how their fraud management results stack up against <em>industry peers</em>. That question has driven my career."</p>
+  </div>
+</div>
+
+<footer>
+  <span>© 2026 Daniel Holmes</span>
+  <span>VP of Product Planning &amp; Strategy · Feedzai</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>

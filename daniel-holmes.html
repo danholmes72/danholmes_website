@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Holmes – VP of Product Planning &amp; Strategy</title>
+<meta name="description" content="Daniel Holmes – VP of Product Planning &amp; Strategy at Feedzai. Fraud prevention leader working at the intersection of strategy, product marketing, and financial crime technology.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink: #0f0f0f; --paper: #f7f5f0; --accent: #c8432a; --muted: #6b6660; --rule: #d8d4cd; --card: #ffffff; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); font-size: 15px; line-height: 1.6; }
+
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 0 48px; height: 56px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; letter-spacing: -0.3px; }
+  .nav-links { display: flex; gap: 32px; }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* HERO */
+  .hero { padding-top: 56px; display: grid; grid-template-columns: 1fr 1fr; overflow: hidden; }
+  .hero-left { padding: 96px 48px 96px 64px; display: flex; flex-direction: column; justify-content: center; animation: fadeUp 0.8s ease both; }
+  .hero-right { background: var(--ink); position: relative; overflow: hidden; display: flex; align-items: stretch; }
+  .hero-tag { font-size: 11px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+  .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(48px, 5.5vw, 72px); font-weight: 700; line-height: 1.0; letter-spacing: -2px; margin-bottom: 24px; }
+  .hero-role { font-size: 17px; font-weight: 400; color: var(--muted); margin-bottom: 0; }
+  .hero-divider { width: 48px; height: 2px; background: var(--accent); margin: 36px 0; }
+  .hero-bio { font-size: 16px; font-weight: 300; color: #3a3735; max-width: 440px; line-height: 1.8; margin-bottom: 44px; }
+  .hero-cta { align-self: flex-start; display: inline-flex; align-items: center; gap: 12px; background: var(--ink); color: #fff; text-decoration: none; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 32px; transition: background 0.2s; }
+  .hero-cta:hover { background: var(--accent); }
+
+  /* STATS PANEL */
+  .hero-stats { position: relative; z-index: 1; display: flex; flex-direction: column; width: 100%; animation: fadeIn 1s ease both 0.5s; }
+  .hero-stat { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0 52px; border-bottom: 1px solid rgba(255,255,255,0.07); transition: background 0.25s; position: relative; }
+  .hero-stat:last-child { border-bottom: none; }
+  .hero-stat::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--accent); transition: width 0.3s ease; }
+  .hero-stat:hover::before { width: 3px; }
+  .hero-stat:hover { background: rgba(255,255,255,0.03); }
+  .hero-stat-number { font-family: 'Playfair Display', serif; font-size: 56px; font-weight: 700; color: #fff; line-height: 1; margin-bottom: 10px; }
+  .hero-stat-accent { color: var(--accent); }
+  .hero-stat-company { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 700; color: #fff; line-height: 1.0; margin-bottom: 10px; letter-spacing: -1.5px; }
+  .hero-stat-company .accent-word { color: var(--accent); }
+  .hero-stat-label { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.42); line-height: 1.55; max-width: 280px; }
+  .hero-glow { position: absolute; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(200,67,42,0.1) 0%, transparent 65%); bottom: -100px; right: -100px; pointer-events: none; }
+
+  section { padding: 96px 64px; }
+  section:nth-child(even) { background: var(--card); }
+  .section-label { font-size: 11px; font-weight: 500; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 40px); font-weight: 600; letter-spacing: -0.8px; margin-bottom: 48px; max-width: 560px; }
+
+  /* EXPERTISE */
+  .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); }
+  .expertise-card { background: var(--paper); padding: 36px 32px; transition: background 0.2s; }
+  section:nth-child(even) .expertise-card { background: var(--card); }
+  .expertise-card:hover { background: var(--ink); color: #fff; }
+  .expertise-card:hover .expertise-icon { color: var(--accent); }
+  .expertise-card:hover .expertise-desc { color: rgba(255,255,255,0.6); }
+  .expertise-icon { font-size: 22px; margin-bottom: 16px; }
+  .expertise-title { font-weight: 600; font-size: 15px; margin-bottom: 8px; }
+  .expertise-desc { font-size: 13px; color: var(--muted); line-height: 1.6; transition: color 0.2s; }
+
+  /* ABOUT - with headshot */
+  .about-inner { display: grid; grid-template-columns: 1fr 280px; gap: 64px; align-items: start; }
+  .about-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; filter: grayscale(20%); }
+  .about-text { padding-top: 8px; }
+  .about-text p { font-size: 15px; color: #3a3735; line-height: 1.8; margin-bottom: 20px; font-weight: 300; }
+
+  /* EXPERIENCE */
+  .experience-list { display: flex; flex-direction: column; }
+  .exp-item { display: grid; grid-template-columns: 220px 1fr; gap: 32px; padding: 36px 0; border-bottom: 1px solid var(--rule); }
+  .exp-item:first-child { border-top: 1px solid var(--rule); }
+  .exp-left { padding-top: 4px; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .exp-logo-wrap { height: 24px; display: flex; align-items: center; }
+  .exp-logo-wrap svg { height: 20px; width: auto; max-width: 130px; opacity: 0.55; transition: opacity 0.2s; }
+  .exp-item:hover .exp-logo-wrap svg { opacity: 1; }
+  .exp-company { font-weight: 600; font-size: 14px; }
+  .exp-period { font-size: 12px; color: var(--muted); letter-spacing: 0.03em; }
+  .exp-tenure { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+  .exp-roles { display: flex; flex-direction: column; gap: 16px; }
+  .exp-role-title { font-family: 'Playfair Display', serif; font-size: 19px; font-weight: 600; margin-bottom: 4px; letter-spacing: -0.3px; }
+  .exp-role-period { font-size: 12px; color: var(--muted); }
+  .exp-role-separator { width: 24px; height: 1px; background: var(--rule); margin: 4px 0; }
+
+  /* WORK */
+  .featured-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .featured-card { border: 1px solid var(--rule); padding: 32px; position: relative; overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+  .featured-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--accent); transition: height 0.3s ease; }
+  .featured-card:hover { border-color: var(--ink); transform: translateY(-2px); }
+  .featured-card:hover::before { height: 100%; }
+  .featured-card-tag { font-size: 10px; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .featured-card-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; line-height: 1.3; margin-bottom: 10px; }
+  .featured-card-desc { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+  /* PRESS */
+  .press-grid { display: flex; flex-direction: column; }
+  .press-item { display: grid; grid-template-columns: 160px 1fr auto; gap: 32px; align-items: start; padding: 28px 0; border-bottom: 1px solid var(--rule); text-decoration: none; color: inherit; transition: background 0.15s; }
+  .press-item:first-child { border-top: 1px solid var(--rule); }
+  .press-item:hover { background: rgba(200,67,42,0.03); }
+  .press-item:hover .press-arrow { opacity: 1; transform: translateX(0); color: var(--accent); }
+  .press-outlet { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+  .press-outlet-name { color: var(--ink); display: block; margin-bottom: 4px; }
+  .press-date { font-size: 11px; color: var(--muted); }
+  .press-title { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 600; line-height: 1.35; margin-bottom: 8px; letter-spacing: -0.2px; }
+  .press-summary { font-size: 13px; color: var(--muted); line-height: 1.65; }
+  .press-arrow { font-size: 18px; color: var(--muted); opacity: 0; transform: translateX(-6px); transition: opacity 0.2s, transform 0.2s, color 0.2s; padding-top: 2px; flex-shrink: 0; }
+  .press-type-badge { display: inline-block; font-size: 9px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--rule); color: var(--muted); margin-bottom: 10px; }
+
+  /* CONTACT */
+  .contact-section { background: var(--ink); color: #fff; padding: 96px 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .contact-section .section-label { color: var(--accent); }
+  .contact-links { display: flex; flex-direction: column; }
+  .contact-link { display: flex; align-items: center; gap: 16px; text-decoration: none; color: rgba(255,255,255,0.6); font-size: 14px; transition: color 0.2s; padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .contact-link:hover { color: #fff; }
+  .contact-link-icon { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; transition: border-color 0.2s, background 0.2s; }
+  .contact-link:hover .contact-link-icon { border-color: var(--accent); background: var(--accent); color: #fff; }
+  .contact-statement { font-family: 'Playfair Display', serif; font-size: clamp(22px, 2.5vw, 32px); font-weight: 400; line-height: 1.5; color: rgba(255,255,255,0.85); }
+  .contact-statement em { color: var(--accent); font-style: normal; }
+
+  footer { background: var(--ink); border-top: 1px solid rgba(255,255,255,0.08); padding: 24px 64px; display: flex; justify-content: space-between; align-items: center; color: rgba(255,255,255,0.3); font-size: 12px; }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 960px) {
+    nav { padding: 0 24px; }
+    .nav-links { gap: 16px; }
+    .hero { grid-template-columns: 1fr; }
+    .hero-left { padding: 80px 24px 60px; }
+    .hero-right { min-height: 320px; }
+    section { padding: 64px 24px; }
+    .expertise-grid { grid-template-columns: 1fr 1fr; }
+    .about-inner { grid-template-columns: 1fr; }
+    .about-photo { max-width: 240px; aspect-ratio: 1/1; }
+    .exp-item { grid-template-columns: 1fr; gap: 8px; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .press-item { grid-template-columns: 1fr; gap: 8px; }
+    .press-arrow { display: none; }
+    .contact-section { grid-template-columns: 1fr; padding: 64px 24px; }
+    footer { padding: 24px; flex-direction: column; gap: 8px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">DH</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#experience">Experience</a>
+    <a href="#work">Work</a>
+    <a href="#press">Press</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">VP &middot; Product Planning &amp; Strategy</div>
+    <h1 class="hero-name">Daniel<br>Holmes</h1>
+    <div class="hero-role">Feedzai &middot; United Kingdom</div>
+    <div class="hero-divider"></div>
+    <p class="hero-bio">Fraud prevention leader working at the intersection of strategy, product marketing, and financial crime technology. Helping the world&#x27;s largest banks understand, measure, and reduce fraud at scale.</p>
+    <a href="#contact" class="hero-cta">Get in touch &rarr;</a>
+  </div>
+  <div class="hero-right">
+    <div class="hero-glow"></div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-number">15<span class="hero-stat-accent">+</span></div>
+        <div class="hero-stat-label">Years in fraud prevention</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-company">Lloyds <span class="accent-word">Banking</span> Group</div>
+        <div class="hero-stat-label">Positions in analytics, operations and strategy at the UK&#x27;s largest bank</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-company">Feedzai <span class="accent-word">&amp;</span> ThreatMetrix</div>
+        <div class="hero-stat-label">Leadership roles at two of the most prominent technology providers globally</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-company"><span class="accent-word">Global</span> Experience</div>
+        <div class="hero-stat-label">Working with the world&#x27;s largest banks to optimise fraud outcomes</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label">About</div>
+  <div class="section-title">Bank-side depth. Vendor-side reach.</div>
+  <div class="about-inner">
+    <div class="about-text reveal">
+      <p>I started my career at Lloyds Banking Group - the UK&#x27;s largest retail bank - where I spent seven years building expertise across fraud data analytics, digital channel fraud, and large-scale transformation programmes. That experience gave me a ground-level understanding of how fraud operates from inside a major institution: the data, the decisions, the organisational constraints, and what it actually takes to move the needle on performance.</p>
+      <p>Moving to the vendor side - via LexisNexis Risk Solutions and then Feedzai - I&#x27;ve spent the past six years converting that domain knowledge into commercial and strategic impact. I&#x27;ve led GTM strategy, shaped product direction, driven competitive positioning, and worked directly with some of the world&#x27;s largest banks to define what best-in-class fraud prevention looks like in practice. I currently lead product planning and strategy at Feedzai, sitting at the intersection of product, market intelligence, and M&amp;A.</p>
+      <p>My focus is simple: help financial institutions understand where the fraud market is heading - and make sure Feedzai is there first.</p>
+    </div>
+    <div class="reveal">
+      <img class="about-photo" src="data:image/png;base64,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" alt="Daniel Holmes" />
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE -->
+<section id="expertise">
+  <div class="section-label">What I do</div>
+  <div class="section-title">Sitting at the intersection of product, strategy, and market.</div>
+  <div class="expertise-grid">
+    <div class="expertise-card reveal"><div class="expertise-icon">&#9672;</div><div class="expertise-title">Product Marketing</div><div class="expertise-desc">GTM strategy, messaging, positioning, and launch execution for fraud and financial crime technology.</div></div>
+    <div class="expertise-card reveal"><div class="expertise-icon">&#9673;</div><div class="expertise-title">Fraud &amp; Identity Strategy</div><div class="expertise-desc">Deep domain expertise across fraud prevention and identity management technology from both bank and vendor sides.</div></div>
+    <div class="expertise-card reveal"><div class="expertise-icon">&#9650;</div><div class="expertise-title">Fraud Technology Intelligence</div><div class="expertise-desc">Comprehensive understanding of the fraud technology landscape - from rules engines and ML to behavioural biometrics, device intelligence, and foundation models.</div></div>
+    <div class="expertise-card reveal"><div class="expertise-icon">&#9678;</div><div class="expertise-title">Product Strategy &amp; M&amp;A</div><div class="expertise-desc">Long-range product strategy, market adjacency analysis, and M&amp;A evaluation to drive growth and competitive positioning in financial crime prevention.</div></div>
+    <div class="expertise-card reveal"><div class="expertise-icon">&#9670;</div><div class="expertise-title">Global Bank Partnerships</div><div class="expertise-desc">Working directly with the world&#x27;s largest banks to push the boundaries of fraud prevention across technology, process, and people.</div></div>
+    <div class="expertise-card reveal"><div class="expertise-icon">&#9700;</div><div class="expertise-title">Go-to-Market Leadership</div><div class="expertise-desc">Cross-functional GTM planning, PM/PMM alignment, and structured release processes that scale with product velocity.</div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-label">Career</div>
+  <div class="section-title">15+ years in fraud prevention, across bank and vendor.</div>
+  <div class="experience-list">
+
+    <div class="exp-item reveal">
+      <div class="exp-left">
+        <div class="exp-logo-wrap">
+          <svg viewBox="0 0 120 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="22" font-family="sans-serif" font-size="18" font-weight="700" fill="#0f0f0f" letter-spacing="-0.5">Feedzai</text>
+          </svg>
+        </div>
+        <div class="exp-period">Jan 2022 – Present</div>
+        <div class="exp-tenure">4 yrs 5 mos</div>
+      </div>
+      <div class="exp-roles">
+        <div><div class="exp-role-title">VP of Product Planning &amp; Strategy</div><div class="exp-role-period">Oct 2025 – Present</div></div>
+        <div class="exp-role-separator"></div>
+        <div><div class="exp-role-title">Director of Banking Fraud, Identity &amp; Market Strategy</div><div class="exp-role-period">Jul 2024 – Oct 2025</div></div>
+        <div class="exp-role-separator"></div>
+        <div><div class="exp-role-title">Fraud Prevention SME</div><div class="exp-role-period">Jan 2022 – Jul 2024</div></div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-left">
+        <div class="exp-logo-wrap">
+          <svg viewBox="0 0 200 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="20" font-family="sans-serif" font-size="11" font-weight="600" fill="#0f0f0f" letter-spacing="0.2">LexisNexis Risk Solutions</text>
+          </svg>
+        </div>
+        <div class="exp-period">Jan 2019 – Jan 2022</div>
+        <div class="exp-tenure">3 yrs 1 mo</div>
+      </div>
+      <div class="exp-roles">
+        <div><div class="exp-role-title">Solutions Director, EMEA</div><div class="exp-role-period">Sep 2020 – Jan 2022</div></div>
+        <div class="exp-role-separator"></div>
+        <div><div class="exp-role-title">Principal Banking Solutions Consultant – Fraud &amp; Identity</div><div class="exp-role-period">Jan 2019 – Sep 2020</div></div>
+      </div>
+    </div>
+
+    <div class="exp-item reveal">
+      <div class="exp-left">
+        <div class="exp-logo-wrap">
+          <svg viewBox="0 0 200 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <text x="0" y="20" font-family="sans-serif" font-size="11" font-weight="600" fill="#006A4E" letter-spacing="0.1">Lloyds Banking Group</text>
+          </svg>
+        </div>
+        <div class="exp-period">Jan 2012 – Jan 2019</div>
+        <div class="exp-tenure">7 yrs 1 mo</div>
+      </div>
+      <div class="exp-roles">
+        <div><div class="exp-role-title">Digital Fraud Analytics Lead – Fraud Transformation</div><div class="exp-role-period">Sep 2016 – Jan 2019</div></div>
+        <div class="exp-role-separator"></div>
+        <div><div class="exp-role-title">Digital Fraud Manager</div><div class="exp-role-period">May 2015 – Sep 2016</div></div>
+        <div class="exp-role-separator"></div>
+        <div><div class="exp-role-title">Fraud Data Analyst</div><div class="exp-role-period">Jan 2012 – May 2015</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FEATURED WORK -->
+<section id="work">
+  <div class="section-label">Selected work</div>
+  <div class="section-title">Recent initiatives and thought leadership.</div>
+  <div class="featured-grid">
+    <div class="featured-card reveal"><div class="featured-card-tag">Report &middot; 2025</div><div class="featured-card-title">State of Fraud Performance – Industry Benchmarking Report</div><div class="featured-card-desc">The first industry benchmarking tool enabling financial institutions to compare fraud management performance against global peers, using Value Detection Rate and False Positive Rate as primary metrics.</div></div>
+    <div class="featured-card reveal"><div class="featured-card-tag">Event &middot; June 2026</div><div class="featured-card-title">Feedzai Fusion North America, New York</div><div class="featured-card-desc">Inaugural North American flagship event bringing together leaders from banking, payments, and technology to address the convergence of fraud, identity, and security.</div></div>
+    <div class="featured-card reveal"><div class="featured-card-tag">Whitepaper &middot; 2026</div><div class="featured-card-title">RiskFM: Foundation Models in Fraud Prevention</div><div class="featured-card-desc">How foundation models supersede traditional ML in fraud detection - delivering better pattern recognition from day one, without dependency on labelled data or feature engineering cycles.</div></div>
+    <div class="featured-card reveal"><div class="featured-card-tag">Partnership &middot; 2025</div><div class="featured-card-title">Mastercard &times; Feedzai: A World of Safer Money</div><div class="featured-card-desc">Strategic partnership spanning scam prevention, real-time payments, and collaborative defence addressing the increasing sophistication of fraud across the digital payments ecosystem.</div></div>
+  </div>
+</section>
+
+<!-- PRESS -->
+<section id="press">
+  <div class="section-label">In the press</div>
+  <div class="section-title">Media coverage and cited commentary.</div>
+  <div class="press-grid">
+    <a href="https://thefintechtimes.com/from-virtual-love-to-real-losses-the-rising-threat-of-ai-fueled-romance-scams/" target="_blank" rel="noopener" class="press-item reveal">
+      <div class="press-outlet"><span class="press-outlet-name">The Fintech Times</span><span class="press-date">Feb 2025</span></div>
+      <div class="press-content"><div class="press-type-badge">Media Citation</div><div class="press-title">From Virtual Love to Real Losses: The Rising Threat of AI-Fuelled Romance Scams</div><div class="press-summary">Cited as senior fraud and identity expert warning that AI-enhanced romance scams are becoming simultaneously more common and more convincing.</div></div>
+      <div class="press-arrow">&rarr;</div>
+    </a>
+    <a href="https://financialit.net/news/fraud-detection/feedzai-launches-new-benchmarking-report" target="_blank" rel="noopener" class="press-item reveal">
+      <div class="press-outlet"><span class="press-outlet-name">Financial IT</span><span class="press-date">2025</span></div>
+      <div class="press-content"><div class="press-type-badge">Quoted</div><div class="press-title">Feedzai Launches Industry&#x27;s First Benchmarking Report for Fraud Management Performance</div><div class="press-summary">Quoted on the industry&#x27;s need for objective peer comparison in fraud management, and Feedzai&#x27;s approach to providing strategic insight alongside performance data.</div></div>
+      <div class="press-arrow">&rarr;</div>
+    </a>
+    <a href="https://www.linkedin.com/posts/daniel-holmes-65911483_this-morning-i-had-the-opportunity-to-represent-activity-7063887249460899841-Qs02/" target="_blank" rel="noopener" class="press-item reveal">
+      <div class="press-outlet"><span class="press-outlet-name">Fox News</span><span class="press-date">2023</span></div>
+      <div class="press-content"><div class="press-type-badge">TV Appearance</div><div class="press-title">Representing Feedzai on Fox News</div><div class="press-summary">Appeared on Fox News as a fraud prevention expert, representing Feedzai on national US television.</div></div>
+      <div class="press-arrow">&rarr;</div>
+    </a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div>
+    <div class="section-label">Contact</div>
+    <div class="section-title" style="color:#fff; margin-bottom: 16px;">Let&#x27;s connect.</div>
+    <p style="color:rgba(255,255,255,0.5); font-size:14px; margin-bottom: 40px;">Open to speaking engagements, advisory conversations, and industry collaboration.</p>
+    <div class="contact-links">
+      <a href="https://www.linkedin.com/in/daniel-holmes-65911483/" target="_blank" rel="noopener" class="contact-link">
+        <div class="contact-link-icon">in</div>LinkedIn Profile
+      </a>
+      <a href="mailto:danholmes72@gmail.com" class="contact-link">
+        <div class="contact-link-icon">@</div>danholmes72@gmail.com
+      </a>
+      <a href="#" class="contact-link">
+        <div class="contact-link-icon">&#128205;</div>United Kingdom
+      </a>
+    </div>
+  </div>
+  <div>
+    <p class="contact-statement">&ldquo;Banks want to understand how their fraud management results stack up against <em>industry peers</em>. That question has driven my career.&rdquo;</p>
+  </div>
+</div>
+
+<footer>
+  <span>&copy; 2026 Daniel Holmes</span>
+  <span>VP of Product Planning &amp; Strategy &middot; Feedzai</span>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
